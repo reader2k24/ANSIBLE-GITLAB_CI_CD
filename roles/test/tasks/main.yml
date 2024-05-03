@@ -1,0 +1,14 @@
+---
+- name: "Test"
+  become: true
+  block:
+    - name: Update the package list
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+    - name: Update the package list
+      copy:
+        content: "123\n"
+        dest: /home/debian/output.txt
+
+        

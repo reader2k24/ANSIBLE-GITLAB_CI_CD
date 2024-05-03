@@ -1,0 +1,7 @@
+---
+- name: Configure servers
+  hosts: all
+  become: true
+  tasks:
+    - include_role:
+        name: test
